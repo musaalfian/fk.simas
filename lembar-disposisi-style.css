@@ -1,0 +1,15 @@
+body {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.disposisi__info h4 {
+    line-height: 2.25rem;
+}
+
+.disposisi__info-title {
+    width: 40%;
+}
+
+.disposisi__info-body {
+    width: 60%;
+}

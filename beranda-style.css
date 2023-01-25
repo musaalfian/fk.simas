@@ -1,0 +1,159 @@
+/* Navbar */
+#navbar {
+    padding: 20px 16px;
+    background-color: var(--light);
+    /* position: static; */
+    border-color: var(--grey);
+}
+
+#navbar a {
+    color: var(--black);
+}
+
+#navbar .icon,
+#navbar .image__user {
+    min-width: 33px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+#navbar .icon {
+    border: 1px solid var(--grey);
+}
+
+#navbar .image__user {
+    background-color: var(--blue);
+}
+
+#navbar .icon {
+    margin-right: .75rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#navbar .dropdown button {
+    display: block;
+    padding: .375rem .75rem;
+}
+
+#navbar .dropdown-menu {
+    left: -75%;
+    /* top: 15%; */
+    border-radius: 10px;
+}
+
+/* Sidebar */
+#sidebar .brand-link {
+    height: unset;
+}
+
+#sidebar .brand-link .d-flex {
+    background-color: var(--blue);
+    min-width: 33px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+#sidebar .brand-link {
+    background-color: white;
+    border: none;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+#sidebarMenu {
+    background-color: white;
+}
+
+#sidebarMenu li {
+    margin-bottom: .5rem;
+}
+
+#sidebarMenu li a {
+    color: var(--black);
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+#sidebarMenu li a.active {
+    color: white;
+    background-color: var(--blue);
+}
+
+#sidebarMenu li a:hover {
+    background-color: var(--blue);
+    color: white;
+    transition: .3s;
+}
+
+.sidebar li i {
+    margin-right: 10px;
+}
+
+.sidebar .active {
+    background-color: var(--blue);
+    color: white;
+}
+
+/* Main page */
+#mainPage {
+    margin-top: 80px;
+    min-height: 100vh !important;
+    padding: 26px 16px;
+    background-color: var(--light);
+    border: none !important;
+}
+
+.dashboard .masuk .icon {
+    min-width: 52px;
+    height: 52px;
+    background-color: #BFF8D4;
+    border-radius: 50%;
+}
+
+.dashboard .masuk .icon i {
+    color: #40A798;
+}
+
+.dashboard .keluar .icon {
+    min-width: 52px;
+    height: 52px;
+    background-color: #B5D9E7;
+    border-radius: 50%;
+}
+
+.dashboard .keluar .icon i {
+    color: #2F5596;
+}
+
+.dashboard .antidatir .icon {
+    min-width: 52px;
+    height: 52px;
+    background-color: #FFEBBC;
+    border-radius: 50%;
+}
+
+.dashboard .antidatir .icon i {
+    color: #FFA323;
+}
+
+.dashboard .text {
+    margin-left: .75rem;
+}
+
+.dashboard .card.surat {
+    min-height: 116px;
+}
+
+.dashboard .informasi {
+    background-color: var(--blue);
+}
+
+/* Footer */
+/* footer {
+    margin-left: 286px !important;
+} */

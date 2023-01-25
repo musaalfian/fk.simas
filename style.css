@@ -1,0 +1,454 @@
+/* Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+/* Variable */
+:root {
+    --blue: #2F5596;
+    --blue-light: #B5D9E7;
+    --black: #3C4648;
+    --black-light: #707A83;
+    --grey: #B4BEC0;
+    --light: #D3DAE0;
+    --white: #fff;
+}
+
+* {
+    list-style: none;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+}
+
+/* Font weight */
+.fw__light {
+    font-weight: 300;
+}
+
+.fw__normal {
+    font-weight: 400;
+}
+
+.fw__med {
+    font-weight: 500;
+}
+
+.fw__semi {
+    font-weight: 600;
+}
+
+.fw__bold {
+    font-weight: 700;
+}
+
+.fw__ebold {
+    font-weight: 800;
+}
+
+/* Color */
+.blue {
+    color: var(--blue);
+}
+
+.blue__light {
+    color: var(--blue-light);
+}
+
+.black {
+    color: var(--black);
+}
+
+.black__light {
+    color: var(--black-light);
+}
+
+.light {
+    color: var(--light);
+}
+
+/* Button */
+.mybtn {
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+    border: none;
+}
+
+.mybtn.blue {
+    background-color: var(--blue);
+    color: white;
+}
+
+.mybtn.blue:hover {
+    background-color: #254B8C;
+    transition: .2s;
+}
+
+.mybtn.blue__light {
+    background-color: var(--light);
+    color: var(--blue);
+}
+
+.mybtn.blue__light:hover {
+    background-color: #CDD4DA;
+    transition: .2s;
+}
+
+.myicon {
+    display: block;
+    cursor: pointer;
+    background-color: unset;
+    border: none;
+    border-radius: 50%;
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+}
+
+.myicon.red {
+    background-color: #F3CEC6;
+    color: #FF6B83;
+}
+
+.myicon.blue {
+    background-color: var(--blue-light);
+    color: var(--blue);
+}
+
+.myicon.green {
+    background-color: #BFF8D4;
+    color: #40A798;
+}
+
+.mybtn.white,
+.mybtn.light {
+    border: 1px solid var(--grey);
+}
+
+.mybtn.white:hover {
+    background-color: var(--blue);
+    color: white;
+    transition: .3s;
+}
+
+.mybtn.light {
+    color: var(--black);
+}
+
+.mybtn.light:hover {
+    background-color: var(--light);
+    transition: .3s;
+}
+
+.btn__blue {
+    background-color: white;
+}
+
+.btn__blue:hover {
+    background-color: var(--light);
+    transition: .3s;
+}
+
+.btn__blue:focus-visible {
+    background-color: var(--light);
+}
+
+/* Margin & padding */
+.mr12 {
+    margin-right: 12px;
+}
+
+.p26 {
+    padding: 26px;
+}
+
+
+/* Card */
+.card {
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+/* Tabel */
+#mytable thead th {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black-light);
+}
+
+#mytable tbody tr td {
+    color: var(--black);
+    font-weight: 600;
+}
+
+#mytable tbody tr td:nth-child(2) {
+    /* font-weight: 700; */
+}
+
+#mytable .sifat {
+    padding: 8px 16px;
+    border-radius: 25px;
+}
+
+#mytable .sifat.rahasia {
+    background-color: #BFF8D4;
+    color: #40A798;
+}
+
+#mytable .sifat.biasa {
+    background-color: #B5D9E7;
+    color: #2F5596;
+}
+
+#mytable .sifat.segera {
+    background-color: #FFEBBC;
+    color: #FFA323;
+}
+
+#mytable tbody tr:hover td {
+    background-color: var(--light);
+    transition: .2s;
+    cursor: pointer;
+}
+
+#mytable .no {
+    text-align: center;
+    width: 30px;
+}
+
+#mytable tbody .date {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* Mytable info */
+
+#mytable_info {
+    padding-top: 0;
+    color: var(--black-light);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Mytable length */
+#mytable_length {
+    margin-right: 1rem;
+}
+
+#mytable_length label {
+    margin-bottom: 0;
+    color: var(--black-light);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Mytable paginate */
+#mytable_paginate .page-item {
+    margin: 0 .25rem;
+}
+
+#mytable_paginate .page-item a {
+    color: var(--black-light);
+}
+
+#mytable_paginate .page-item.active a {
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: white;
+}
+
+#mytable_paginate .page-item.next a,
+#mytable_paginate .page-item.previous a {
+    background-color: unset;
+}
+
+#mytable_paginate li span i {
+    color: var(--black-light);
+    font-weight: 600;
+}
+
+#mytable_paginate li a {
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+}
+
+#mytable_paginate li a:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#mytable_paginate .previous {
+    margin-right: 1rem;
+}
+
+#mytable_paginate .next {
+    margin-left: 1rem;
+}
+
+/* Form */
+#myform input,
+#myform select,
+#myform textarea {
+    font-weight: 300;
+    color: var(--black-light);
+    border-color: var(--grey);
+}
+
+#myform input:focus,
+#myform textarea:focus {
+    color: var(--black);
+}
+
+#myform select:focus,
+#myform input:focus,
+#myform textarea:focus {
+    outline: var(--light) solid 2px;
+    box-shadow: none;
+    border-color: var(--blue);
+}
+
+#mydate input {
+    padding: 6px 12px;
+    border: 1px solid var(--grey);
+    border-radius: .25rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    min-height: 38px;
+}
+
+#mydate input::placeholder {
+    color: var(--black-light);
+
+}
+
+#mydate button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+#mydate .duet-date__dialog {
+    bottom: 0;
+    top: unset;
+}
+
+#mydate .duet-date__select--month:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+#registrasiSuratMasuk .perihal,
+#editSuratMasuk .perihal {
+    min-height: 7.8rem;
+}
+
+#registrasiSuratKeluar .perihal,
+#editSuratKeluar .perihal {
+    min-height: 7.8rem;
+}
+
+#registrasiSuratKeluar .input input {
+    width: 60%;
+}
+
+#registrasiSuratKeluar .input button {
+    padding: 6px;
+    min-height: 38px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid var(--blue);
+    display: block;
+    width: 40%;
+}
+
+/* Modal */
+.modal-content .btn-close {
+    border-radius: 50%;
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--grey);
+    transition: .2s;
+    font-size: 14px;
+}
+
+.modal-content .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* Font weight */
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 992px) {}
