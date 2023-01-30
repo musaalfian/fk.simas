@@ -233,16 +233,25 @@ p {
 #mytable .sifat.rahasia {
     background-color: #BFF8D4;
     color: #40A798;
+    border-color: #72D9CA;
 }
 
 #mytable .sifat.biasa {
     background-color: #B5D9E7;
     color: #2F5596;
+    border-color: #A2ACB5;
 }
 
 #mytable .sifat.segera {
     background-color: #FFEBBC;
     color: #FFA323;
+    border-color: #FFCB4B;
+}
+
+#mytable .sifat.penting {
+    background-color: #B5D9E7;
+    color: #2F5596;
+    border-color: #6187C8;
 }
 
 #mytable tbody tr:hover td {
@@ -350,7 +359,8 @@ p {
     border-color: var(--blue);
 }
 
-#mydate input {
+#mydate input,
+#mydateKeluar input {
     padding: 6px 12px;
     border: 1px solid var(--grey);
     border-radius: .25rem;
@@ -360,12 +370,14 @@ p {
     min-height: 38px;
 }
 
-#mydate input::placeholder {
+#mydate input::placeholder,
+#mydateKeluar input::placeholder {
     color: var(--black-light);
 
 }
 
-#mydate button:focus {
+#mydate button:focus,
+#mydateKeluar button:focus {
     border: none;
     box-shadow: none;
 }
@@ -375,7 +387,12 @@ p {
     top: unset;
 }
 
-#mydate .duet-date__select--month:focus {
+#mydateKeluar .duet-date__dialog {
+    bottom: unset;
+}
+
+#mydate .duet-date__select--month:focus,
+#mydateKeluar .duet-date__select--month:focus {
     box-shadow: none;
     border: none;
     outline: none;
@@ -406,6 +423,7 @@ p {
     display: block;
     width: 40%;
 }
+
 
 /* Modal */
 .modal-content .btn-close {

@@ -67,17 +67,17 @@ table thead th:last-child {
     width: 10%;
 }
 
-table tbody tr {
-    height: 40.8px;
-}
-
-
 @media print {
     body {
         width: 21cm;
         height: 29.7cm;
-        /* margin: 30mm 45mm 30mm 45mm;  */
+        margin-bottom: 30mm;
+        /* margin: 30mm 45mm 30mm 45mm; */
         /* change the margins as you want them to be. */
+    }
+
+    form .mb-3 {
+        margin-bottom: 3px !important;
     }
 
     .disposisi__header {
@@ -94,5 +94,9 @@ table tbody tr {
 
     table thead {
         display: table-header-group;
+    }
+
+    button {
+        display: none;
     }
 }
