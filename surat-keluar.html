@@ -104,8 +104,12 @@
                 Admin <i class="fa-solid fa-angle-down ms-1"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
-                  >Keluar</a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >Keluar</a
+                  >
+                </li>
               </ul>
             </div>
           </li>
@@ -199,211 +203,229 @@
             </div>
           </div>
           <div class="card p-4 mt-3">
-            <div class="d-flex justify-content-between align-items-center mb-3">
+            <div
+              class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3"
+            >
               <h4 class="fw__bold black">Daftar Surat Keluar</h4>
-              <button
-                id="tes"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#registrasiSuratKeluar"
-                class="mybtn blue"
-              >
-                <i class="fa-solid fa-plus me-2"></i>Registrasi Surat
-              </button>
-
-              <!-- Modal -->
               <div
-                class="modal fade"
-                id="registrasiSuratKeluar"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
+                class="d-flex align-items-center gap-3 input__tanggal flex-wrap"
               >
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content p-3">
-                    <div class="modal-header">
-                      <h4
-                        class="modal-title fw__bold black"
-                        id="exampleModalLabel"
-                      >
-                        Form Registrasi Surat Keluar
-                      </h4>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <form id="myform">
-                        <div class="row">
-                          <div class="col-lg-6 col-12">
-                            <div class="mb-3">
-                              <label
-                                for="noSurat"
-                                class="form-label black fw-semibold"
-                                >Nomor Surat</label
-                              >
-                              <div class="input d-flex align-items-center">
-                                <input
-                                  type="text"
-                                  readonly
-                                  class="form-control"
-                                  placeholder="Nomor surat"
-                                  id="noSurat"
-                                  aria-describedby="emailHelp"
-                                />
-                                <button type="button" class="ms-2">
-                                  Ambil Nomor <i class="fas fa-search ms-1"></i>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="kodeUnit"
-                                class="form-label black fw-semibold"
-                                >Kode Unit Surat</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="kodeHak"
-                                class="form-label black fw-semibold"
-                                >Kode Hal</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="kodeHak"
-                                class="form-label black fw-semibold"
-                                >Tujuan Surat</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="kodeHak"
-                                class="form-label black fw-semibold"
-                                >Sifat</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-lg-6 col-12">
-                            <div class="mb-3">
-                              <label
-                                for="kodeHak"
-                                class="form-label black fw-semibold"
-                                >Disahkan Oleh</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="date"
-                                class="form-label black fw-semibold"
-                                >Tanggal Disahkan</label
-                              >
-                              <duet-date-picker
-                                id="mydateKeluar"
-                                identifier="date"
-                              ></duet-date-picker>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="lampiran"
-                                class="form-label black fw-semibold"
-                                >Upload Lampiran</label
-                              >
+                <p class="">Rentang Tanggal :</p>
+                <input
+                  type="date"
+                  name="inputTanggal"
+                  id="inputTanggal"
+                  class="mybtn"
+                />
+                <input
+                  type="date"
+                  name="inputTanggalEnd"
+                  id="inputTanggalEnd"
+                  class="mybtn"
+                />
+                <button
+                  id="tes"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#registrasiSuratKeluar"
+                  class="mybtn blue"
+                >
+                  <i class="fa-solid fa-plus me-2"></i>Registrasi Surat
+                </button>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="registrasiSuratKeluar"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                  <div class="modal-header">
+                    <h4
+                      class="modal-title fw__bold black"
+                      id="exampleModalLabel"
+                    >
+                      Form Registrasi Surat Keluar
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="myform">
+                      <div class="row">
+                        <div class="col-lg-6 col-12">
+                          <div class="mb-3">
+                            <label
+                              for="noSurat"
+                              class="form-label black fw-semibold"
+                              >Nomor Surat</label
+                            >
+                            <div class="input d-flex align-items-center">
                               <input
-                                type="file"
+                                type="text"
+                                readonly
                                 class="form-control"
-                                id="lampiran"
+                                placeholder="Nomor surat"
+                                id="noSurat"
                                 aria-describedby="emailHelp"
                               />
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="exampleFormControlTextarea1"
-                                class="form-label black fw-semibold"
-                                >Perihal</label
-                              >
-                              <textarea
-                                class="form-control perihal"
-                                id="exampleFormControlTextarea1"
-                                rows="4"
-                                placeholder="Contoh : Permohonan perijinan penelitian"
-                              ></textarea>
+                              <button type="button" class="ms-2">
+                                Ambil Nomor <i class="fas fa-search ms-1"></i>
+                              </button>
                             </div>
                           </div>
+                          <div class="mb-3">
+                            <label
+                              for="kodeUnit"
+                              class="form-label black fw-semibold"
+                              >Kode Unit Surat</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="kodeHak"
+                              class="form-label black fw-semibold"
+                              >Kode Hal</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="kodeHak"
+                              class="form-label black fw-semibold"
+                              >Tujuan Surat</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="kodeHak"
+                              class="form-label black fw-semibold"
+                              >Sifat</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
                         </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="mybtn light"
-                        data-bs-dismiss="modal"
-                      >
-                        Batal
-                      </button>
-                      <button
-                        type="button"
-                        class="mybtn blue"
-                        onclick="confirmAdd()"
-                      >
-                        Tambah
-                      </button>
-                    </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="mb-3">
+                            <label
+                              for="kodeHak"
+                              class="form-label black fw-semibold"
+                              >Disahkan Oleh</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="date"
+                              class="form-label black fw-semibold"
+                              >Tanggal Disahkan</label
+                            >
+                            <duet-date-picker
+                              id="mydateKeluar"
+                              identifier="date"
+                            ></duet-date-picker>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="lampiran"
+                              class="form-label black fw-semibold"
+                              >Upload Lampiran</label
+                            >
+                            <input
+                              type="file"
+                              class="form-control"
+                              id="lampiran"
+                              aria-describedby="emailHelp"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="exampleFormControlTextarea1"
+                              class="form-label black fw-semibold"
+                              >Perihal</label
+                            >
+                            <textarea
+                              class="form-control perihal"
+                              id="exampleFormControlTextarea1"
+                              rows="4"
+                              placeholder="Contoh : Permohonan perijinan penelitian"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="mybtn light"
+                      data-bs-dismiss="modal"
+                    >
+                      Batal
+                    </button>
+                    <button
+                      type="button"
+                      class="mybtn blue"
+                      onclick="confirmAdd()"
+                    >
+                      Tambah
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="table-responsive">
-              <table id="mytable" class="table">
+              <table id="mytable" class="table w-100">
                 <thead>
                   <tr>
                     <th class="no">No</th>
