@@ -234,9 +234,6 @@
                 <p>Rentang tanggal:</p>
                 <input type="text" id="datepickerStart" placeholder="Awal" />
                 <input type="text" id="datepickerEnd" placeholder="Akhir" />
-                <a href="" class="mybtn export">
-                  <i class="fa-solid fa-file-export me-1"></i> Export
-                </a>
                 <button
                   id="tes"
                   type="button"
@@ -680,6 +677,7 @@
               </div>
               <!-- Modal edit end -->
             </div>
+
           </div>
           <!-- Daftar surat end -->
         </section>
@@ -812,6 +810,43 @@
       src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"
     ></script>
 
+    <!-- Data tables :  -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"
+    ></script>
+    <!-- Data tables :  -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+    ></script>
+    <!-- Data tables :  -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"
+    ></script>
+    <!-- Data tables :  -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"
+    ></script>
+    <!-- Data tables :  -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"
+    ></script>
+    <!-- Data tables :  -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"
+    ></script>
+
     <!-- Initializing data tables -->
     <script>
       $(document).ready(function () {
@@ -824,8 +859,21 @@
               target: "",
             },
           },
-          dom: '<ft`$coba`<"d-flex align-items-center justify-content-between mt-3"<"d-flex align-items-center"li><"right"p>>>',
-          // dom: '<"table-responsive"tpf>',
+          dom: '<<"d-flex align-items-center justify-content-end tes"Bf>t`$coba`<"d-flex align-items-center justify-content-between mt-3"<"d-flex align-items-center"li><"right"p>>>',
+          // dom: "Bfrtip",
+          buttons: [
+            {
+              extend: "excelHtml5",
+              title: "Data export",
+            },
+            {
+              extend: "pdfHtml5",
+              title: "Data Surat ",
+              exportOptions: {
+                columns: [0, 1, 2, 3, 4],
+              },
+            },
+          ],
           destroy: true,
           order: [[0, "desc"]],
           language: {
@@ -866,6 +914,14 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
+    </script>
+
+    <!-- Insert element using javascript -->
+    <script>
+      $(document).ready(function () {
+        const intro = $("#mytable_filter label").get();
+        console.log(intro); // ❌ this logs n.fn.init[1]
+      });
     </script>
   </body>
 </html>

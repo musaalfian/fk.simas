@@ -41,3 +41,7 @@
   background-color: hsl(171, 44%, 45%);
 }
 /* Button export end */
+
+.tes .dt-buttons button {
+  border: none;
+}
