@@ -1,0 +1,17 @@
+.akun__pengguna #mytable_filter input {
+  width: 12.2rem;
+}
+
+.icon__pengguna {
+  width: fit-content;
+}
+
+.icon__pengguna div {
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+}
+
+.icon__pengguna img {
+  width: 72px;
+  height: 72px;
+}

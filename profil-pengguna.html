@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admin | Surat Masuk</title>
+    <title>Admin | Kelola Akun</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -30,6 +30,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/surat-masuk-style.css" />
+    <link rel="stylesheet" href="css/kelola-akun-style.css" />
 
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -40,34 +41,6 @@
       href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-    <!-- Initializing date picker : rentang start -->
-    <script>
-      $(function () {
-        $("#datepickerStart").datepicker();
-      });
-    </script>
-
-    <!-- Initializing date picker : rentang end -->
-    <script>
-      $(function () {
-        $("#datepickerEnd").datepicker();
-      });
-    </script>
-
-    <!-- Initializing date picker : tanggal pengajuan tambah -->
-    <script>
-      $(function () {
-        $("#datepickerPengajuanTambah").datepicker();
-      });
-    </script>
-
-    <!-- Initializing date picker : tanggal pengajuan edit -->
-    <script>
-      $(function () {
-        $("#datepickerPengajuanEdit").datepicker();
-      });
-    </script>
   </head>
   <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
     <div class="wrapper">
@@ -112,6 +85,16 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
+                  <a class="dropdown-item" href="kelola-akun.html"
+                    ><i class="fa-solid fa-user me-2"></i>Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-lock me-2"></i>Ubah Password</a
+                  >
+                </li>
+                <li>
                   <a class="dropdown-item" href="#"
                     ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
                     >Keluar</a
@@ -153,7 +136,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="surat-masuk.html" class="nav-link active">
+                <a href="surat-masuk.html" class="nav-link">
                   <i class="fa-solid fa-envelope me-1"></i>
                   <p class="fw__light">Surat Masuk</p>
                 </a>
@@ -171,7 +154,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="kelola-akun.html" class="nav-link">
+                <a href="kelola-akun.html" class="nav-link active">
                   <i class="fa-solid fa-user-gear me-1"></i>
                   <p class="fw__light">Kelola Akun</p>
                 </a>
@@ -185,71 +168,21 @@
       <!-- Main page start -->
       <div id="mainPage" class="content-wrapper surat__masuk">
         <section class="content">
-          <!-- Old start -->
-          <!-- <div class="row">
-            <div class="col-md-6 col-lg-8 col-12">
-              <div class="card p-4 mb-md-0 keterangan">
-                <h4 class="fw__bold black mb-3">Keterangan</h4>
-                <h5 class="fw__normal black__light mb-3">
-                  Surat masuk wajib dilakukan registrasi. Registrasi surat
-                  dilakukan dengan sistem dalam melakukan kearsipan surat.
-                  Operator dapat melakukan registrasi surat masuk dan penerusan
-                  ke pimpinan agar dapat menindak lanjuti surat tersebut. Anda
-                  dapat mendownload "Tata Naskah Dinas di Lingkungan Universitas
-                  Diponegoro" sebagai pedoman dalam membuat nomor surat dengan
-                  menekan tombol dibawah ini.
-                </h5>
-                <a href="" class="mybtn blue fw__light"
-                  ><i class="fa-solid fa-download me-1"></i> Download
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-12">
-              <div class="card p-4 h-100">
-                <h4 class="fw__bold black mb-3">Aktivitas Terakhir</h4>
-              </div>
-            </div>
-          </div> -->
-          <!-- Old end -->
-
-          <div class="card p-4 mb-md-0 keterangan">
-            <h4 class="fw__bold black mb-3">Keterangan</h4>
-            <h5 class="fw__normal black__light mb-3">
-              Surat masuk wajib dilakukan registrasi. Registrasi surat dilakukan
-              dengan sistem dalam melakukan kearsipan surat. Operator dapat
-              melakukan registrasi surat masuk dan penerusan ke pimpinan agar
-              dapat menindak lanjuti surat tersebut. Anda dapat mendownload
-              "Tata Naskah Dinas di Lingkungan Universitas Diponegoro" sebagai
-              pedoman dalam membuat nomor surat dengan menekan tombol dibawah
-              ini.
-            </h5>
-            <a href="" class="mybtn blue fw__light"
-              ><i class="fa-solid fa-download me-1"></i> Download
-            </a>
-          </div>
-
           <!-- Daftar surat start -->
           <div class="card p-4 mt-3">
             <div
               class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3"
             >
-              <h4 class="fw__bold black">Daftar Surat Masuk</h4>
-              <div
-                class="d-flex align-items-center gap-2 input__tanggal flex-wrap"
+              <h4 class="fw__bold black">Daftar Akun Pengguna</h4>
+              <button
+                id="tes"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#registrasiSuratMasuk"
+                class="mybtn blue"
               >
-                <p>Rentang tanggal:</p>
-                <input type="text" id="datepickerStart" placeholder="Awal" />
-                <input type="text" id="datepickerEnd" placeholder="Akhir" />
-                <button
-                  id="tes"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#registrasiSuratMasuk"
-                  class="mybtn blue"
-                >
-                  <i class="fa-solid fa-plus me-2"></i>Registrasi Surat
-                </button>
-              </div>
+                <i class="fa-solid fa-plus me-2"></i>Tambah Pengguna
+              </button>
             </div>
 
             <!-- Modal registrasi start -->
@@ -405,36 +338,27 @@
             </div>
             <!-- Modal registrasi end -->
 
-            <div class="table-responsive">
+            <div class="table-responsive akun__pengguna">
               <table id="mytable" class="table w-100">
                 <thead>
                   <tr>
                     <th class="no">No</th>
-                    <th>Asal Surat / No. Surat</th>
-                    <th>Perihal</th>
-                    <th>Penerima</th>
-                    <th>Sifat</th>
+                    <th>Nama</th>
+                    <th>Unit/bagian</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="no">1</td>
-                    <td>
-                      KETUA DEPARTEMEN ILMU GIZI Nomor :
-                      14/UN7.5.4.4/DIG/KP/2021
-                      <br />
-                      <span class="date d-inline-block mt-1"
-                        >23 November 2021 - 04:08 WIB</span
-                      >
-                    </td>
-                    <td>Permohonan Kenaikan Gaji Pegawai Kontrak</td>
-                    <td>Dekan Fakultas</td>
+                    <td>admin@gmail.com</td>
+                    <td>Fakultas</td>
                     <td>
                       <div
                         class="sifat segera d-flex justify-content-center align-items-center"
                       >
-                        <h6 class="fw__semi">Segera</h6>
+                        <h6 class="fw__semi">Aktif</h6>
                       </div>
                     </td>
                     <td>
@@ -466,64 +390,6 @@
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </div>
-                        <div
-                          class="icon__disposisi"
-                          data-bs-toggle="tooltip"
-                          data-bs-title="Disposisi"
-                        >
-                          <a
-                            href="lembar-disposisi.html"
-                            class="myicon green d-flex align-items-center justify-content-center"
-                          >
-                            <i class="fa-solid fa-file-export"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="no">1</td>
-                    <td>
-                      KETUA DEPARTEMEN ILMU GIZI Nomor :
-                      14/UN7.5.4.4/DIG/KP/2021
-                      <br />
-                      <span class="date d-inline-block mt-1"
-                        >23 November 2021 - 04:08 WIB</span
-                      >
-                    </td>
-                    <td>Permohonan Kenaikan Gaji Pegawai Kontrak</td>
-                    <td>Dekan Fakultas</td>
-                    <td>
-                      <div
-                        class="sifat segera d-flex justify-content-center align-items-center"
-                      >
-                        <h6 class="fw__semi">Segera</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <button
-                          type="button"
-                          data-bs-toggle="modal"
-                          data-bs-target="#editSuratMasuk"
-                          class="myicon blue d-flex align-items-center justify-content-center me-2"
-                        >
-                          <i class="fa-regular fa-pen-to-square"></i>
-                        </button>
-
-                        <button
-                          type="button"
-                          class="myicon red d-flex align-items-center justify-content-center me-2"
-                          onclick="confirm()"
-                        >
-                          <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <a
-                          href="lembar-disposisi.html"
-                          class="myicon green d-flex align-items-center justify-content-center"
-                        >
-                          <i class="fa-solid fa-file-export"></i>
-                        </a>
                       </div>
                     </td>
                   </tr>
@@ -538,14 +404,14 @@
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-md">
                   <div class="modal-content p-3">
                     <div class="modal-header">
                       <h4
                         class="modal-title fw__bold black"
                         id="exampleModalLabel"
                       >
-                        Form Edit Surat Masuk
+                        Form Edit Data Akun Pengguna
                       </h4>
                       <button
                         type="button"
@@ -556,108 +422,124 @@
                     </div>
                     <div class="modal-body">
                       <form id="myform">
+                        <div class="icon__pengguna mx-auto my-3">
+                          <div
+                            class="d-flex align-items-center justify-content-center p-1 text-center"
+                          >
+                            <img src="img/avatar-man.png" alt="" />
+                          </div>
+                        </div>
+
                         <div class="row">
-                          <div class="col-lg-6 col-12">
-                            <div class="mb-3">
-                              <label
-                                for="noSurat"
-                                class="form-label black fw-semibold"
-                                >Nomor Surat</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Masukkan nomor surat"
-                                id="noSurat"
-                                aria-describedby="emailHelp"
-                              />
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="penerima"
-                                class="form-label black fw-semibold"
-                                >Penerima</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="date"
-                                class="form-label black fw-semibold"
-                                >Tanggal Pengajuan</label
-                              >
-                              <input
-                                type="text"
-                                id="datepickerPengajuanEdit"
-                                class="form-control"
-                              />
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="asalSurat"
-                                class="form-label black fw-semibold"
-                                >Asal Surat</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="asalSurat"
-                                placeholder="Contoh : Ketua Departemen Kedokteran"
-                                aria-describedby="emailHelp"
-                              />
+                          <div class="mb-3">
+                            <label
+                              for="nama"
+                              class="form-label black fw-semibold"
+                              >Nama</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="nama"
+                              aria-describedby="emailHelp"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="nip"
+                              class="form-label black fw-semibold"
+                              >NIP</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="nip"
+                              readonly
+                              aria-describedby="emailHelp"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="departemen"
+                              class="form-label black fw-semibold"
+                              >Departemen</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="prodi"
+                              class="form-label black fw-semibold"
+                              >Program Studi</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-- Pilih salah satu --</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="status"
+                              class="form-label black fw-semibold"
+                              >Status</label
+                            >
+                            <div class="d-flex align-items-center">
+                              <div class="form-check me-4 d-block">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault2"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexRadioDefault2"
+                                >
+                                  Aktif
+                                </label>
+                              </div>
+                              <div class="form-check d-block">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexRadioDefault1"
+                                >
+                                  Tidak Aktif
+                                </label>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-lg-6 col-12">
-                            <div class="mb-3">
-                              <label
-                                for="penerima"
-                                class="form-label black fw-semibold"
-                                >Sifat</label
-                              >
-                              <select
-                                class="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>-- Pilih salah satu --</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="lampiran"
-                                class="form-label black fw-semibold"
-                                >Upload Lampiran</label
-                              >
-                              <input
-                                type="file"
-                                class="form-control"
-                                id="lampiran"
-                                aria-describedby="emailHelp"
-                              />
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                for="exampleFormControlTextarea1"
-                                class="form-label black fw-semibold"
-                                >Perihal</label
-                              >
-                              <textarea
-                                class="form-control perihal"
-                                id="exampleFormControlTextarea1"
-                                rows="1"
-                                placeholder="Contoh : Permohonan perijinan penelitian"
-                              ></textarea>
-                            </div>
+                          <div class="mb-3">
+                            <label
+                              for="lampiran"
+                              class="form-label black fw-semibold"
+                              >Foto</label
+                            >
+                            <input
+                              type="file"
+                              class="form-control"
+                              id="lampiran"
+                              aria-describedby="emailHelp"
+                            />
                           </div>
                         </div>
                       </form>
@@ -675,7 +557,7 @@
                         class="mybtn blue"
                         onclick="confirmEdit()"
                       >
-                        Simpah
+                        Simpan
                       </button>
                     </div>
                   </div>
@@ -718,57 +600,6 @@
     <!-- Sweet alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Sweet alert : confirm delete -->
-    <script>
-      function confirm() {
-        new Audio("audio/warning-edited.mp3").play();
-        Swal.fire({
-          title: "Konfirmasi",
-          text: "Yakin ingin menghapus file?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#2F5596",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Ya, hapus!",
-          cancelButtonText: "Batal",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            Swal.fire("Berhasil!", "File anda berhasil dihapus.", "success");
-            new Audio("audio/success-edited.mp3").play();
-          } else {
-            new Audio("audio/cancel-edited.mp3").play();
-          }
-        });
-      }
-    </script>
-
-    <!-- Sweet alert : confirm add -->
-    <script>
-      function confirmAdd() {
-        new Audio("audio/warning-edited.mp3").play();
-        Swal.fire({
-          title: "Konfirmasi",
-          text: "Pastikan data yang anda masukkan benar!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#2F5596",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Tambah",
-          cancelButtonText: "Batal",
-          reverseButtons: true,
-        }).then((result) => {
-          if (result.isConfirmed) {
-            new Audio("audio/success-edited.mp3").play();
-            Swal.fire("Berhasil!", "Data berhasil ditambahkan.", "success");
-            $("#registrasiSuratMasuk").modal("hide");
-          } else {
-            new Audio("audio/cancel-edited.mp3").play();
-            $("#registrasiSuratMasuk").modal("hide");
-          }
-        });
-      }
-    </script>
-
     <!-- Sweet alert : confirm edit -->
     <script>
       function confirmEdit() {
@@ -796,6 +627,30 @@
       }
     </script>
 
+    <!-- Sweet alert : confirm delete -->
+    <script>
+      function confirm() {
+        new Audio("audio/warning-edited.mp3").play();
+        Swal.fire({
+          title: "Konfirmasi",
+          text: "Yakin ingin menghapus file?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#2F5596",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Ya, hapus!",
+          cancelButtonText: "Batal",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire("Berhasil!", "File anda berhasil dihapus.", "success");
+            new Audio("audio/success-edited.mp3").play();
+          } else {
+            new Audio("audio/cancel-edited.mp3").play();
+          }
+        });
+      }
+    </script>
+
     <!-- Data tables -->
     <script
       type="text/javascript"
@@ -813,43 +668,6 @@
       type="text/javascript"
       charset="utf8"
       src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"
-    ></script>
-
-    <!-- Data tables :  -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"
-    ></script>
-    <!-- Data tables :  -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
-    ></script>
-    <!-- Data tables :  -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"
-    ></script>
-    <!-- Data tables :  -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"
-    ></script>
-    <!-- Data tables :  -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"
-    ></script>
-    <!-- Data tables :  -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"
     ></script>
 
     <!-- Initializing data tables -->
@@ -889,11 +707,6 @@
             infoEmpty: "Baris tidak tersedia",
             infoFiltered: "(filtered from _MAX_ total records)",
             search: "Cari :",
-            // pagingType: "numbers",
-            // paginate: {
-            //   previous: "Sebelumnya",
-            //   next: "Berikutnya",
-            // },
           },
           oLanguage: {
             oPaginate: {

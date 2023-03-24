@@ -223,8 +223,9 @@ p {
   font-weight: 600;
 }
 
-#mytable tbody .no {
+#mytable thead .no, #mytable tbody .no {
   text-align: center;
+  width: 8%;
 }
 
 #mytable .sifat {
@@ -514,6 +515,14 @@ p {
   border-radius: 10px;
 }
 
+#navbar .dropdown-menu li {
+  margin: .5rem 0;
+}
+
+#navbar .dropdown-menu svg {
+  width: 16px;
+}
+
 /* ================================== */
 /*               Sidebar              */
 /* ================================== */
@@ -561,8 +570,8 @@ p {
   transition: 0.3s;
 }
 
-.sidebar li i {
-  margin-right: 10px;
+.sidebar li svg {
+  width: 16px;
 }
 
 .sidebar .active {
